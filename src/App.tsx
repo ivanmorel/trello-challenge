@@ -1,9 +1,5 @@
-const App = () => {
-  return (
-    <div className="App">
-      Test
-    </div>
-  );
-}
+import MainPage from "./pages/MainPage";
+
+const App = () => <MainPage />
 
 export default App;
