@@ -5,7 +5,7 @@ const groupsApiUrl = `${apiUrl}/groups`;
 const tasksApiUrl = `${apiUrl}/tasks`;
 
 export {
-    accessToken,
-    groupsApiUrl,
-    tasksApiUrl,
+  accessToken,
+  groupsApiUrl,
+  tasksApiUrl,
 }
