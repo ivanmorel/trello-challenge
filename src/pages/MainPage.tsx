@@ -16,11 +16,11 @@ const MainPage = () => {
   const [tasks, setTasks] = useState<any>({});
 
   const fetchData = async () => {
-    const { data: dataGroups } = await getGroups();
-    const { data: dataTasks } = await getTasks();
-    setGroups(dataGroups);
+    const groupResponse = await getGroups();
+    const taskResponse = await getTasks();
+    setGroups(groupResponse?.data);
 
-    const hashedTasks = dataTasks.reduce((acc: any, task: Task) => {
+    const hashedTasks = taskResponse?.data.reduce((acc: any, task: Task) => {
       const { groupDto: { id: groupId } } = task;
       if (!acc[groupId]) acc[groupId] = [];
       acc[groupId].push(task);

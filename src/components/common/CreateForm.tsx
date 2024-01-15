@@ -77,6 +77,7 @@ const CreateForm = ({ className, buttonSize, addButtonLabel, addListButtonLabel,
           value={form[field]}
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
+          key={field}
         />
       })}
       <div className="flex gap-2">
