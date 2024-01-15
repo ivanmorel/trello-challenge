@@ -21,7 +21,6 @@ const TaskCard = ({ task: initialTask, handleUpdateTask, handleDeleteTask }: Tas
   const handleInputChange = async ({ field, value }: any) =>
     await handleUpdateTask({ ...task, [field]: value });
 
-
   const handleDelete = async () => {
     setLoading(true);
     await handleDeleteTask(task);
